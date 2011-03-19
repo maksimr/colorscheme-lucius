@@ -6,6 +6,7 @@
 
 
 hi -a StatusLineNormal									 background: #3A3A3A;
+hi -a StatusLineNormal									 padding-top: 2px; padding-bottom: 2px;
 hi -a StatusLineNormal									 border-left: 10px solid transparent;
 
 hi -l StatusLineNormal StatusLine
@@ -27,17 +28,23 @@ hi -l StatusLineNormal StatusLineBroken
 hi -a Events                       border: 2px solid #6688EE !important;
 hi -a Preview											 color: gray;
 
-hi -a StatusErrorMsg               font-size: 18px !important; color: #e0e0e0 !important;
-hi -a StatusErrorMsg               -l StatusWarningMsg StatusQuestion StatusInfoMsg StatusModeMsg StatusMoreMsg
+hi -a StatusModeMsg                color: #e0e0e0 !important;
+
+hi -l StatusModeMsg StatusQuestion 
+hi -l StatusModeMsg StatusInfoMsg 
+hi -l StatusModeMsg StatusMoreMsg
+hi -l StatusModeMsg StatusWarningMsg 
+hi -l StatusModeMsg StatusErrorMsg               
 
 hi -a CmdCmdLine									 color: #e0e0e0;
 
 hi -a CmdCmdLine									 font-weight: normal;
+hi -a CmdCmdLine									 font-family: Ubuntu;
 hi -a CmdNormal									   font-size: 18px; text-shadow: none;
 hi -a CmdNormal									   padding-top: 2px;
 hi -a CmdNormal									   background: #222;
 
-hi -a Normal											 color: #e0e0e0; background: #222; font-weight: normal;
+hi -a Normal											 color: #e0e0e0; background: #4f4f4f; font-weight: normal;
 
 hi -l CmdNormal CmdOutput
 	hi -a CmdOutput										  
@@ -102,7 +109,8 @@ hi -a Search          font-size: inherit; padding: 0;
 hi -a Search          color: #000; background-color: #9bece7; padding: 0;
 
 hi -a ModeMsg                       color: #e0e0e0;
-hi -a ModeMsg                       background: #222;
+hi -a ModeMsg                       padding: 5px;
+hi -a ModeMsg                       background: #4F4F4F;
 
 hi -l ModeMsg MoreMsg 
 	hi -a MoreMsg                     color: #9D3BA7; 
