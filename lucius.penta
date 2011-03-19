@@ -26,7 +26,6 @@ hi -l StatusLineNormal StatusLineBroken
 
 hi -a Events                       border: 2px solid #6688EE !important;
 hi -a Preview											 color: gray;
-hi -a Title												 
 
 hi -a StatusErrorMsg               font-size: 18px !important; color: #e0e0e0 !important;
 hi -a StatusErrorMsg               -l StatusWarningMsg StatusQuestion StatusInfoMsg StatusModeMsg StatusMoreMsg
@@ -62,10 +61,13 @@ hi -l CmdNormal CmdWarningMsg
 "NOTE: buffer colors
 hi -a CompItem[selected]           background-color: #303030 !important;
 
+hi -a Title												 color: #f18448;
+
 hi -a CompTitle										 color: #f18448;
 hi -a CompTitle										 background: transparent;
 hi -a CompTitle										 font-weight: normal; font-family: Verdana; font-size: 14px;
-hi -a CompTitleSep								 height: 0px !important; background: #2f2f2f !important;
+
+hi -a CompTitleSep								 height: 0px !important; background: #222 !important;
 
 
 hi -a CompResult									 width: 50%; overfloaw: hidden;
@@ -83,34 +85,54 @@ hi -a CompItem										 font-weight: normal; background-color: inherit;
 hi -a CompItem:nth-child(2n+1)     background-color: inherit !important;
 hi -a CompIcon										 width: 16px; min-width: 16px; display: inline-block; margin-right: 2ex; margin-left: 2px;
 hi -a CompLess										 text-align: center; height: 0; line-height: .5ex; padding-top: 1ex;
-hi -a CompMore										 text-align: center; height: .5ex; line-height: .5ex; margin-bottom: -.5ex;
-hi -a CompMsg											 font-style: italic; margin-left: 16px;
 hi -a CompGroup                    background: transparent;
 "hi -a CompMore::after		
 "hi -a CompIcon>img
 "hi -a CompItem>*
 
-"NOTE: style arrow 
-"hi -a CompLess::after                  color:red !important;		
-"hi -a CompGroup:last-of-type           color: red !important;
-"hi -a CompGroup:not(:first-of-type)
-"NOTE: gradient
-hi -a Gradient				          height: 1px; margin-bottom: -1px; margin-top: -1px;
-hi -a GradientLeft							background-color: #2f2f2f;
-hi -a GradientRight							background-color: #2f2f2f;
-"NOTE: link
-hi -a Link:not(:hover)>LinkInfo color: #e0e0e0 !important;
-hi -a Message                   color: #e0e0e0 !important;
-hi -a Message\ String           color: #e0e0e0 !important;
+hi -a CompMore										 color: #e0e0e0;
+hi -a CompMsg											 color: #e0e0e0;
 
-
-hi -a Tag             color: #e0e0e0 !important;
-hi -a Keyword         color: #e0e0e0 !important;
-hi -a NonText					color: #2f2f2f !important;
-hi -a Indicator				color: #2bef4s !important;
+hi -a Tag             color: #e0e0e0;
+hi -a Keyword         color: #e0e0e0;
+hi -a NonText					color: #2f2f2f;
+hi -a Indicator				color: #2bef4s;
 
 hi -a Search          font-size: inherit; padding: 0; 
 hi -a Search          color: #000; background-color: #9bece7; padding: 0;
+
+hi -a ModeMsg                       color: #e0e0e0;
+hi -a ModeMsg                       background: #222;
+
+hi -l ModeMsg MoreMsg 
+	hi -a MoreMsg                     color: #9D3BA7; 
+hi -l ModeMsg InfoMsg 
+hi -l ModeMsg Question 
+	hi -a Question                    color: #8cd0d3; 
+hi -l ModeMsg ErrorMsg 
+	hi -a ErrorMsg                    color: red; 
+hi -l ModeMsg WarningMsg
+	hi -a WarningMsg                  color: #e6c080; 
+
+hi -a Function				color: #e6c080;
+hi -a Null						color: #8cd0d3;
+hi -a Number					color: #8cd0d3;
+hi -a Object					color: #8cd0d3;
+hi -a String					color: #80c0d9;
+
+"hi -a CompLess::after                  color:red !important;		
+"hi -a CompGroup:last-of-type           color: red !important;
+"hi -a CompGroup:not(:first-of-type)
+
+hi -a Gradient				          height: 1px; margin-bottom: -1px; margin-top: -1px;
+hi -a GradientLeft							background-color: #2f2f2f;
+hi -a GradientRight							background-color: #2f2f2f;
+
+hi -a Link:not(:hover)>LinkInfo color: #f18448;
+hi -a Message                   color: #e0e0e0;
+hi -a Message\ String           color: #e0e0e0;
+
+
 
 "NOTE: other
 "hi -a LineNr
@@ -151,22 +173,7 @@ hi -a Filter color: #e0e0e0;
 "hi -a HelpHead3
 "hi -a HelpHead4
 "hi -a HelpInfo
-"CompTitle
-"NOTE: messages color
-"Normal",
-"ErrorMsg"
-"ModeMsg",
-"MoreMsg",
-"Question"
-"InfoMsg",
-"WarningMsg",
-"LineNr",
-hi -a Question				color: #ff7400 !important; background: #4f4f4f !important; font-weight: normal !important;
-hi -a ErrorMsg				color: #ff7400 !important; background: #4f4f4f !important; font-weight: normal !important;
-hi -a WarningMsg			color: #ff7400 !important; background: #4f4f4f !important; font-weight: normal !important;
-hi -a ModeMsg					color: #e0e0e0 !important; background: #4f4f4f !important; font-weight: normal !important;
-hi -a MoreMsg					color: #e0e0e0 !important; background: #4f4f4f !important; font-weight: normal !important;
-hi -a InfoMsg					color: #e0e0e0 !important; background: #4f4f4f !important; font-weight: normal !important;
+
 "NOTE: hint color 
 hi -a Hint						font-family: Ubuntu, Comic Sans MS !important; font-size: 15px !important; font-weight: bold !important; color: #fff !important; background-color: #6DA0DD !important; padding: 4px; border: none !important;
 hi -a Hint[active]		background: #73BDBB !important; 
